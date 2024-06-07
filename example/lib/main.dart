@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:electronic_id_card/electronic_id_card.dart';
 
 void main() {
-  runApp(ElectronicIDCardExampleApp());
+  runApp(const ElectronicIDCardExampleApp());
 }
 
-final CardInfoModel cardData = CardInfoModel(
+const CardInfoModel cardData = CardInfoModel(
     firstName: 'Lukas',
     lastName: 'Mueller',
     idCardNumber: 'L0300T35',
@@ -17,12 +17,14 @@ final CardInfoModel cardData = CardInfoModel(
     isValid: true);
 
 class ElectronicIDCardExampleApp extends StatelessWidget {
+  const ElectronicIDCardExampleApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Electronic ID Card'),
+          title: const Text('Electronic ID Card'),
         ),
         body: Center(
           child: Builder(builder: (context) {
@@ -33,19 +35,19 @@ class ElectronicIDCardExampleApp extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => CardLayout()),
+                      MaterialPageRoute(builder: (context) => const CardLayout()),
                     );
                   },
-                  child: Text('Go to Card Layout'),
+                  child: const  Text('Go to Card Layout'),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => CompactLayout()),
+                      MaterialPageRoute(builder: (context) => const CompactLayout()),
                     );
                   },
-                  child: Text('Go to Compact Layout'),
+                  child: const Text('Go to Compact Layout'),
                 ),
               ],
             );
@@ -57,11 +59,13 @@ class ElectronicIDCardExampleApp extends StatelessWidget {
 }
 
 class CardLayout extends StatelessWidget {
+  const CardLayout({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Electronic ID Card')),
-      body: SingleChildScrollView(
+      appBar: AppBar(title: const Text('Electronic ID Card')),
+      body: const SingleChildScrollView(
         child: Column(
           children: [
             Center(
@@ -75,11 +79,13 @@ class CardLayout extends StatelessWidget {
 }
 
 class CompactLayout extends StatelessWidget {
+  const CompactLayout({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Electronic ID Card Compact')),
-      body: SingleChildScrollView(
+      appBar: AppBar(title: const Text('Electronic ID Card Compact')),
+      body: const SingleChildScrollView(
         child: Column(
           children: [
             Center(

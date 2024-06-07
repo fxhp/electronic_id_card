@@ -18,10 +18,6 @@ class IDCardLayout extends StatelessWidget {
     this.photosHeight = 200,
   });
 
-  bool isNetworkImage(String path) {
-    return path.startsWith('http://') || path.startsWith('https://');
-  }
-
   @override
   Widget build(BuildContext context) {
     return _buildCardLayout();
@@ -124,10 +120,6 @@ class IDCardLayoutCompact extends StatelessWidget {
     required this.cardInfoModel,
     this.width = 300,
   });
-
-  bool isNetworkImage(String path) {
-    return path.startsWith('http://') || path.startsWith('https://');
-  }
 
   @override
   Widget build(BuildContext context) {
