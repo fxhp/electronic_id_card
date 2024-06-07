@@ -14,14 +14,14 @@ class InfoColumn extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 12.0,
             color: Colors.black,
           ),
         ),
         Text(
           info,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16.0,
             fontWeight: FontWeight.bold,
             color: Colors.black,
